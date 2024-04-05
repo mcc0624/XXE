@@ -45,6 +45,7 @@ services:
    networks:
      lan:
        ipv4_address: 10.1.2.3
+
  xxe_03:
    image: php:7.0.8-apache
    privileged: true
@@ -54,6 +55,8 @@ services:
    networks:
      extnetwork:
        ipv4_address: 10.1.1.5
+     lan:
+       ipv4_address: 10.1.2.5
 
  xxe_04:
    image: php:7.0.8-apache
@@ -102,3 +105,15 @@ services:
   networks:
     extnetwork:
       ipv4_address: 10.1.1.10
+
+ apache:
+   image: bitnami/apache:2.4.54
+   restart: always
+   networks:
+     extnetwork:
+       ipv4_address: 10.1.1.11
+   ports:
+     - "80:8080"
+   volumes:
+     - ./apache/index.html:/opt/bitnami/apache2/htdocs/index.html
+     - ./apache/my_vhost.conf:/vhosts/my_vhost.conf
