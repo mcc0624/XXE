@@ -8,7 +8,7 @@ if(isset($xml)){
     $dom->loadXML($xml, LIBXML_NOENT | LIBXML_DTDLOAD);
     $creds = simplexml_import_dom($dom);
     $benben = $creds->admin;
-    echo admin;
+    echo $benben;
 }
 highlight_file(__FILE__);
 ?>

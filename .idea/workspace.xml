@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43a6b799-da10-4775-ad4d-892ba73da07b" name="Changes" comment="add class06.php page to index.html">
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/css/demo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/css/font.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/css/icon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/css/material-bootstrap-wizard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/doLogin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/img/ctfstu_log.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/js/jquery-2.2.4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/js/jquery.bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/js/jquery.validate.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class06/xxe06/js/material-bootstrap-wizard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class01/xxe01/class06.php" beforeDir="false" afterPath="$PROJECT_DIR$/class01/xxe01/class06.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +60,7 @@
       <workItem from="1702180302361" duration="1000" />
       <workItem from="1712299550485" duration="1631000" />
       <workItem from="1712301565912" duration="1316000" />
+      <workItem from="1712572844154" duration="969000" />
     </task>
     <task id="LOCAL-00001" summary="add class06.php">
       <created>1712301347840</created>
