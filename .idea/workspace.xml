@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a6b799-da10-4775-ad4d-892ba73da07b" name="Changes" comment="add class06.php page to index.html">
+    <list default="true" id="43a6b799-da10-4775-ad4d-892ba73da07b" name="Changes" comment="fix some bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class01/xxe01/class06.php" beforeDir="false" afterPath="$PROJECT_DIR$/class01/xxe01/class06.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,9 @@
       <workItem from="1702180302361" duration="1000" />
       <workItem from="1712299550485" duration="1631000" />
       <workItem from="1712301565912" duration="1316000" />
-      <workItem from="1712572844154" duration="969000" />
+      <workItem from="1712572844154" duration="1609000" />
+      <workItem from="1713253794445" duration="609000" />
+      <workItem from="1713756424473" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="add class06.php">
       <created>1712301347840</created>
@@ -76,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712301772647</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix some bug">
+      <created>1712588373494</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712588373494</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +104,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add class06.php" />
     <MESSAGE value="add class06.php page to index.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="add class06.php page to index.html" />
+    <MESSAGE value="fix some bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some bug" />
   </component>
 </project>
