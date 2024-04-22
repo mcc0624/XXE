@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a6b799-da10-4775-ad4d-892ba73da07b" name="Changes" comment="命令执行部分代码错误修复">
+    <list default="true" id="43a6b799-da10-4775-ad4d-892ba73da07b" name="Changes" comment="解决class04中php伪协议无法使用问题">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +74,7 @@
       <workItem from="1712301565912" duration="1316000" />
       <workItem from="1712572844154" duration="1609000" />
       <workItem from="1713253794445" duration="609000" />
-      <workItem from="1713756424473" duration="4878000" />
+      <workItem from="1713756424473" duration="6014000" />
     </task>
     <task id="LOCAL-00001" summary="add class06.php">
       <created>1712301347840</created>
@@ -111,7 +111,21 @@
       <option name="project" value="LOCAL" />
       <updated>1713762537652</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="解决class04中php伪协议无法使用问题">
+      <created>1713770057068</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713770057068</updated>
+    </task>
+    <task id="LOCAL-00007" summary="解决class04中php伪协议无法使用问题">
+      <created>1713770068302</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713770068302</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +148,7 @@
     <MESSAGE value="fix some bug" />
     <MESSAGE value="修改部分题目命名" />
     <MESSAGE value="命令执行部分代码错误修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="命令执行部分代码错误修复" />
+    <MESSAGE value="解决class04中php伪协议无法使用问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决class04中php伪协议无法使用问题" />
   </component>
 </project>

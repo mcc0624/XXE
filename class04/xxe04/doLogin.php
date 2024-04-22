@@ -21,9 +21,9 @@ if(!preg_match_all($preg,$xmlfile,$res)) {
         $password = $creds->password;
 
         if ($username == $USERNAME && $password == $PASSWORD) {
-            $result = sprintf("<result><code>%d</code><msg>%s</msg></result>", 1, 'admin');
+            $result = sprintf("<result><code>%d</code><msg>%s</msg></result>", 1,  $username);
         } else {
-            $result = sprintf("<result><code>%d</code><msg>%s</msg></result>", 0, '用户');
+            $result = sprintf("<result><code>%d</code><msg>%s</msg></result>", 0,  $username);
         }
     } catch (Exception $e) {
         $result = sprintf("<result><code>%d</code><msg>%s</msg></result>", 3, $e->getMessage());
