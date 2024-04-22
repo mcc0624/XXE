@@ -63,6 +63,7 @@ services:
    privileged: true
    volumes:
      - ./class04:/var/www/html/
+     - ./phpini:/usr/local/etc/php/
    restart: always
    networks:
      extnetwork:
