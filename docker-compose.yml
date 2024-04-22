@@ -40,7 +40,7 @@ services:
    image: php:7.0.8-apache
    privileged: true
    volumes:
-     - ./CommandExec:/var/www/html
+     - ./CodeExec:/var/www/html
    restart: always
    networks:
      lan:
