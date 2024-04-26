@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a6b799-da10-4775-ad4d-892ba73da07b" name="Changes" comment="修复class04题目无回显">
+    <list default="true" id="43a6b799-da10-4775-ad4d-892ba73da07b" name="Changes" comment="添加class04双网卡">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apache/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class05/xxe05/doLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/class05/xxe05/doLogin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,11 +20,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -75,7 +76,9 @@
       <workItem from="1712301565912" duration="1316000" />
       <workItem from="1712572844154" duration="1609000" />
       <workItem from="1713253794445" duration="609000" />
-      <workItem from="1713756424473" duration="7989000" />
+      <workItem from="1713756424473" duration="9300000" />
+      <workItem from="1714118987501" duration="628000" />
+      <workItem from="1714135367132" duration="1121000" />
     </task>
     <task id="LOCAL-00001" summary="add class06.php">
       <created>1712301347840</created>
@@ -133,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713784678504</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="添加class04双网卡">
+      <created>1713801607996</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713801607996</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +168,7 @@
     <MESSAGE value="命令执行部分代码错误修复" />
     <MESSAGE value="解决class04中php伪协议无法使用问题" />
     <MESSAGE value="修复class04题目无回显" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复class04题目无回显" />
+    <MESSAGE value="添加class04双网卡" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加class04双网卡" />
   </component>
 </project>

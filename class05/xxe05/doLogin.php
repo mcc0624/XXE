@@ -16,6 +16,7 @@ if(!preg_match_all($preg,$xmlfile,$res)) {
     $cmd2=preg_replace($end,'',$cmd1);
     $cmd3=preg_replace('/\"|\'/m','',$cmd2);
     $cmd=preg_replace('/<user>.*<\/user>/mi','',$cmd3);
+    $pattern = '/["\{\}|\\<>: ]/';
 
     $preg1="/\<\!DOCTYPE.*\]\>/mi";
     $xmlfile = preg_replace($preg1,'',$xmlfile);
@@ -34,7 +35,11 @@ if(!preg_match_all($preg,$xmlfile,$res)) {
             $username='admin';
             $password='admin';
         }else{
-            $username=shell_exec($cmd);
+            if (preg_match($pattern,$cmd)){
+                echo "DOMDocument::loadXML(): Invalid URI: expect://echo BLAH in Entity, line: 40";
+            } else {
+                $username=shell_exec($cmd);
+            }
         }
 
         if ($username == $USERNAME && $password == $PASSWORD) {
