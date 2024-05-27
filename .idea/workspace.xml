@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a6b799-da10-4775-ad4d-892ba73da07b" name="Changes" comment="添加class04双网卡">
+    <list default="true" id="43a6b799-da10-4775-ad4d-892ba73da07b" name="Changes" comment="修改post提交路径错误">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apache/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class05/xxe05/doLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/class05/xxe05/doLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,10 @@
       <workItem from="1713253794445" duration="609000" />
       <workItem from="1713756424473" duration="9300000" />
       <workItem from="1714118987501" duration="628000" />
-      <workItem from="1714135367132" duration="1121000" />
+      <workItem from="1714135367132" duration="2217000" />
+      <workItem from="1714965866330" duration="1207000" />
+      <workItem from="1715749712885" duration="1251000" />
+      <workItem from="1716811305069" duration="1596000" />
     </task>
     <task id="LOCAL-00001" summary="add class06.php">
       <created>1712301347840</created>
@@ -143,7 +145,21 @@
       <option name="project" value="LOCAL" />
       <updated>1713801607996</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="expect协议无法执行部分符号">
+      <created>1714136807630</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714136807630</updated>
+    </task>
+    <task id="LOCAL-00011" summary="修改post提交路径错误">
+      <created>1716811437668</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716811437668</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +185,8 @@
     <MESSAGE value="解决class04中php伪协议无法使用问题" />
     <MESSAGE value="修复class04题目无回显" />
     <MESSAGE value="添加class04双网卡" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加class04双网卡" />
+    <MESSAGE value="expect协议无法执行部分符号" />
+    <MESSAGE value="修改post提交路径错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改post提交路径错误" />
   </component>
 </project>

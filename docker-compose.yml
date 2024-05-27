@@ -102,7 +102,7 @@ services:
        ipv4_address: 10.1.1.9
 
  xxe_08:
-  image: mcc0624/xxe08:2.0
+  image: mcc0624/xxe08:3.0
   privileged: true
   restart: always
   networks:
