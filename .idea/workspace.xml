@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a6b799-da10-4775-ad4d-892ba73da07b" name="Changes" comment="修改post提交路径错误">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="43a6b799-da10-4775-ad4d-892ba73da07b" name="Changes" comment="修复apache代理路径错误" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +77,7 @@
       <workItem from="1714135367132" duration="2217000" />
       <workItem from="1714965866330" duration="1207000" />
       <workItem from="1715749712885" duration="1251000" />
-      <workItem from="1716811305069" duration="1596000" />
+      <workItem from="1716811305069" duration="2220000" />
     </task>
     <task id="LOCAL-00001" summary="add class06.php">
       <created>1712301347840</created>
@@ -159,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716811437668</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="修复apache代理路径错误">
+      <created>1716816518668</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716816518668</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +191,7 @@
     <MESSAGE value="添加class04双网卡" />
     <MESSAGE value="expect协议无法执行部分符号" />
     <MESSAGE value="修改post提交路径错误" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改post提交路径错误" />
+    <MESSAGE value="修复apache代理路径错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复apache代理路径错误" />
   </component>
 </project>

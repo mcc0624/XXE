@@ -12,15 +12,19 @@ if(!preg_match_all($preg,$xmlfile,$res)) {
     $xmlfile = file_get_contents('php://input');
     $bef="/\<\!DOC.*expect:\/\//mi";
     $end="/\>]>/m";
-    $cmd1=preg_replace($bef,'',$xmlfile);
-    $cmd2=preg_replace($end,'',$cmd1);
-    $cmd3=preg_replace('/\"|\'/m','',$cmd2);
-    $cmd=preg_replace('/<user>.*<\/user>/mi','',$cmd3);
-    $pattern = '/["\{\}|\\<>: ]/';
+    if (preg_match( $bef, $xmlfile)) {
+        $cmd1 = preg_replace($bef, '', $xmlfile);
+        $cmd2 = preg_replace($end, '', $cmd1);
+        $cmd3 = preg_replace('/\"|\'/m', '', $cmd2);
+        $cmd = preg_replace('/<user>.*<\/user>/mi', '', $cmd3);
+        $pattern = '/["\{\}|\\<>: ]/';
 
-    $preg1="/\<\!DOCTYPE.*\]\>/mi";
-    $xmlfile = preg_replace($preg1,'',$xmlfile);
-    $xmlfile = preg_replace('/\&.*\;/i','user',$xmlfile);
+        $preg1 = "/\<\!DOCTYPE.*\]\>/mi";
+        $xmlfile1 = preg_replace($preg1, '', $xmlfile);
+        $xmlfile2 = preg_replace('/\&.*\;/i', 'user', $xmlfile1);
+    }else{
+        $cmd = $xmlfile2;
+    }
 
 
     try {
@@ -38,7 +42,9 @@ if(!preg_match_all($preg,$xmlfile,$res)) {
             if (preg_match($pattern,$cmd)){
                 echo "DOMDocument::loadXML(): Invalid URI: expect://echo BLAH in Entity, line: 40";
             } else {
-                $username=shell_exec($cmd);
+                if (preg_match($bef, $xmlfile)) {
+                    $username = shell_exec($cmd);
+                }
             }
         }
 
