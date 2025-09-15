@@ -100,6 +100,9 @@ services:
    networks:
      extnetwork:
        ipv4_address: 10.1.1.9
+   dns:
+     - 8.8.8.8
+     - 114.114.114.114
 
  xxe_08:
   image: mcc0624/xxe08:3.0
