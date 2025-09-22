@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XInclude 功能演示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFC9',
+                        neutral: '#F5F7FA',
+                        dark: '#1D2129',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['Consolas', 'Monaco', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .code-block {
+                @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto font-mono text-sm my-4;
+            }
+            .section-card {
+                @apply bg-white rounded-xl shadow-md p-6 mb-8 transition-all duration-300 hover:shadow-lg;
+            }
+            .btn-primary {
+                @apply bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-all duration-200;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-dark">
+    <!-- 顶部导航 -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-primary flex items-center">
+                <i class="fa fa-code-fork mr-2"></i>XInclude 演示
+            </h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#intro" class="hover:text-primary transition-colors">简介</a></li>
+                    <li><a href="#example" class="hover:text-primary transition-colors">示例</a></li>
+                    <li><a href="#security" class="hover:text-primary transition-colors">安全注意事项</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- 简介部分 -->
+        <section id="intro" class="section-card">
+            <h2 class="text-2xl font-bold mb-4 text-primary">什么是 XInclude？</h2>
+            <p class="mb-4">XInclude 是 XML 标准的一部分，用于在一个 XML 文档中包含另一个 XML 文档的内容。它类似于编程中的"引入"或"导入"功能，有助于更好地组织和重用 XML 内容。</p>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-3">主要用途：</h3>
+            <ul class="list-disc pl-6 mb-4 space-y-2">
+                <li><strong>内容重用</strong>：将通用内容放在单独文件中，在多个文档中引用</li>
+                <li><strong>模块化管理</strong>：将大型 XML 文档拆分为多个小文件，便于维护</li>
+                <li><strong>简化更新</strong>：修改被包含的文件，所有引用它的文档都会自动更新</li>
+            </ul>
+            
+            <h3 class="text-xl font-semibold mt-6 mb-3">基本语法：</h3>
+            <p class="mb-2">首先需要声明 XInclude 命名空间，然后使用 &lt;xi:include&gt; 元素引用外部文件：</p>
+            <div class="code-block">
+&lt;!-- 声明命名空间 --&gt;
+&lt;root xmlns:xi="http://www.w3.org/2001/XInclude"&gt;
+  &lt;!-- 包含外部 XML 文件 --&gt;
+  &lt;xi:include href="header.xml"/&gt;
+  
+  &lt;!-- 文档主体内容 --&gt;
+  &lt;content&gt;这是主文档内容&lt;/content&gt;
+  
+  &lt;!-- 包含另一个文件 --&gt;
+  &lt;xi:include href="footer.xml"/&gt;
+&lt;/root&gt;
+            </div>
+        </section>
+
+        <!-- 示例演示部分 -->
+        <section id="example" class="section-card">
+            <h2 class="text-2xl font-bold mb-4 text-primary">交互式示例</h2>
+            <p class="mb-6">下面展示了 XInclude 的工作原理。点击"处理包含"按钮查看合并后的结果。</p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- 主文档 -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">主文档 (main.xml)</h3>
+                    <div class="code-block h-64">
+&lt;library xmlns:xi="http://www.w3.org/2001/XInclude"&gt;
+  &lt;xi:include href="books.xml"/&gt;
+  
+  &lt;xi:include href="magazines.xml"/&gt;
+  
+  &lt;new-arrivals&gt;
+    &lt;book&gt;
+      &lt;title&gt;XML 高级指南&lt;/title&gt;
+      &lt;author&gt;张三&lt;/author&gt;
+    &lt;/book&gt;
+  &lt;/new-arrivals&gt;
+&lt;/library&gt;
+                    </div>
+                </div>
+                
+                <!-- 被包含的文件 -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">被包含的文件</h3>
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-700">books.xml</h4>
+                        <div class="code-block h-32">
+&lt;books&gt;
+  &lt;book&gt;
+    &lt;title&gt;XML 入门&lt;/title&gt;
+    &lt;author&gt;李四&lt;/author&gt;
+  &lt;/book&gt;
+  &lt;book&gt;
+    &lt;title&gt;XSLT 实践&lt;/title&gt;
+    &lt;author&gt;王五&lt;/author&gt;
+  &lt;/book&gt;
+&lt;/books&gt;
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-700">magazines.xml</h4>
+                        <div class="code-block h-28">
+&lt;magazines&gt;
+  &lt;magazine&gt;
+    &lt;title&gt;XML 周刊&lt;/title&gt;
+    &lt;issue&gt;2023-05&lt;/issue&gt;
+  &lt;/magazine&gt;
+&lt;/magazines&gt;
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 处理结果 -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">处理后的结果</h3>
+                    <button id="processBtn" class="btn-primary mb-4 flex items-center">
+                        <i class="fa fa-cogs mr-2"></i>处理包含
+                    </button>
+                    <div id="result" class="code-block h-64 flex items-center justify-center text-gray-400">
+                        点击上方按钮查看处理结果
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 安全注意事项 -->
+        <section id="security" class="section-card">
+            <h2 class="text-2xl font-bold mb-4 text-primary">安全注意事项</h2>
+            
+            <div class="bg-amber-50 border-l-4 border-amber-400 p-4 mb-6">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <i class="fa fa-exclamation-triangle text-amber-500 text-xl"></i>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm text-amber-700">
+                            XInclude 如果使用不当可能带来安全风险，处理不可信内容时需特别谨慎。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">常见安全风险</h3>
+                    <ul class="space-y-3">
+                        <li class="flex">
+                            <i class="fa fa-warning text-red-500 mt-1 mr-2"></i>
+                            <div>
+                                <strong>路径遍历攻击</strong>：恶意构造路径访问敏感文件
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fa fa-warning text-red-500 mt-1 mr-2"></i>
+                            <div>
+                                <strong>服务器端请求伪造(SSRF)</strong>：通过URL访问内网资源
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fa fa-warning text-red-500 mt-1 mr-2"></i>
+                            <div>
+                                <strong>拒绝服务(DoS)</strong>：超大文件或嵌套包含耗尽资源
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fa fa-warning text-red-500 mt-1 mr-2"></i>
+                            <div>
+                                <strong>恶意内容注入</strong>：包含被篡改的文件
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">防护建议</h3>
+                    <ul class="space-y-3">
+                        <li class="flex">
+                            <i class="fa fa-shield text-green-500 mt-1 mr-2"></i>
+                            <div>
+                                <strong>验证输入</strong>：限制href为预定义的安全路径
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fa fa-shield text-green-500 mt-1 mr-2"></i>
+                            <div>
+                                <strong>禁用外部URL</strong>：只允许包含本地文件
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fa fa-shield text-green-500 mt-1 mr-2"></i>
+                            <div>
+                                <strong>限制大小和深度</strong>：防止DoS攻击
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fa fa-shield text-green-500 mt-1 mr-2"></i>
+                            <div>
+                                <strong>禁用外部实体</strong>：防止XXE漏洞
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>© 2023 XInclude 演示页面</p>
+                <p class="text-gray-400 text-sm mt-2">使用 HTML, Tailwind CSS 和 JavaScript 构建</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 模拟XInclude处理过程
+        document.getElementById('processBtn').addEventListener('click', function() {
+            // 模拟处理后的XML结果
+            const processedXml = `&lt;library&gt;
+  &lt;books&gt;
+    &lt;book&gt;
+      &lt;title&gt;XML 入门&lt;/title&gt;
+      &lt;author&gt;李四&lt;/author&gt;
+    &lt;/book&gt;
+    &lt;book&gt;
+      &lt;title&gt;XSLT 实践&lt;/title&gt;
+      &lt;author&gt;王五&lt;/author&gt;
+    &lt;/book&gt;
+  &lt;/books&gt;
+  
+  &lt;magazines&gt;
+    &lt;magazine&gt;
+      &lt;title&gt;XML 周刊&lt;/title&gt;
+      &lt;issue&gt;2023-05&lt;/issue&gt;
+    &lt;/magazine&gt;
+  &lt;/magazines&gt;
+  
+  &lt;new-arrivals&gt;
+    &lt;book&gt;
+      &lt;title&gt;XML 高级指南&lt;/title&gt;
+      &lt;author&gt;张三&lt;/author&gt;
+    &lt;/book&gt;
+  &lt;/new-arrivals&gt;
+&lt;/library&gt;`;
+            
+            // 显示结果并添加动画效果
+            const resultElement = document.getElementById('result');
+            resultElement.innerHTML = processedXml;
+            resultElement.classList.add('animate-pulse');
+            setTimeout(() => {
+                resultElement.classList.remove('animate-pulse');
+            }, 1000);
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
