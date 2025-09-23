@@ -81,6 +81,7 @@ services:
      extnetwork:
        ipv4_address: 10.1.1.7
    dns:
+     - 223.5.5.5
      - 114.114.114.114
 
  xxe_06:
@@ -93,6 +94,7 @@ services:
      extnetwork:
        ipv4_address: 10.1.1.8
    dns:
+     - 223.5.5.5
      - 114.114.114.114
 
  xxe_07:
@@ -105,6 +107,7 @@ services:
      extnetwork:
        ipv4_address: 10.1.1.9
    dns:
+     - 223.5.5.5
      - 114.114.114.114
 
  xxe_08:
