@@ -23,3 +23,9 @@ docker-compose up -d
 
 部署完成后访问主机80端口即可看到靶场内容
 
+# 三、我的小店
+
+如果需要直接使用，也可以在我的小店里面购买环境，虚拟机已经部署完成，各位可以直接购买后使用，感谢支持
+```
+https://mall.bilibili.com/neul-next/detailshop/index.html?page=detailshop_detail&noTitleBar=1&smallShopMid=271803648&from=mall_search_mall
+```
