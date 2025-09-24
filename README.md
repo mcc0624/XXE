@@ -27,6 +27,6 @@ docker-compose up -d
 
 如果需要直接使用，也可以在我的小店里面购买环境，虚拟机已经部署完成，各位可以直接购买后使用，感谢支持
 ```
-https://mall.bilibili.com/neul-next/detailshop/index.html?page=detailshop_detail&noTitleBar=1&smallShopMid=271803648&from=mall_search_mall
+https://mall.bilibili.com/neul-next/detailshop/index.html?page=detailshop_detail&noTitleBar=1&smallShopMid=271803648
 ```
 <img width="1440" height="2377" alt="16" src="https://github.com/user-attachments/assets/b152ffcf-b5f7-43c8-b54d-282897a917b1" />
