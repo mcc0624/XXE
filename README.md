@@ -29,3 +29,4 @@ docker-compose up -d
 ```
 https://mall.bilibili.com/neul-next/detailshop/index.html?page=detailshop_detail&noTitleBar=1&smallShopMid=271803648&from=mall_search_mall
 ```
+<img width="1440" height="2377" alt="16" src="https://github.com/user-attachments/assets/b152ffcf-b5f7-43c8-b54d-282897a917b1" />
